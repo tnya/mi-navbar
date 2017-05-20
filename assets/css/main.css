@@ -1,0 +1,64 @@
+/* margin: 0 para que navbar se ajuste al borde del navegador */
+body{
+	margin: 0;
+
+}
+
+
+ul{
+	list-style: none; /* para que elementos de la lista no muestren el simbolo que trae cada elem x defecto */
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #333;/* para que resalte el fondo */
+	font-family: Roboto;
+}
+
+/* ELEMENTOS DE LA LISTA */
+
+ul li{
+	display: inline-block;/* para que se coloque de manera horizontal */
+}
+
+/* ENLACES */
+
+ul li a{
+	display: inline-block;
+	color: white;
+	text-align: center;
+	padding: 26px;
+	text-decoration: none;/* quitamos subrayado */
+}
+
+li a:hover, .dropdown:hover, .dropbtn:hover{/* hover hace que el enlace cambie de color(background + texto) al pasar el cursor por el enlace */
+	background-color: #FFE900;
+	color: #333;
+}
+
+/* Contenedor de los enlaces */
+
+.dropdown-content{ /* enlaces se despliegan en la pantalla al pasar cursor */
+	display: none;/* para que los enlaces no se vean en el comienzo*/
+	position: absolute;
+	background-color: #f9f9f9;
+	min-width: 180px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);/* sombra al contenedor */
+	z-index: 1;
+}
+
+.dropdown-content a {
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block; 
+	text-align: center;
+}
+
+.dropdown-content a:hover { 
+	background-color: #FFE900;
+}
+
+.dropdown:hover .dropdown-content{/* hover le dice al contenedor q pase a display block */
+	display: block;/* para que contenedor y sus enlaces se visualicen */
+}
+
